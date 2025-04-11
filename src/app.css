@@ -1,5 +1,10 @@
 @import 'tailwindcss';
+
 @plugin "daisyui";
+
+@theme {
+	--font-sans: 'Inter Variable', 'ui-sans-serif', 'sans-serif';
+}
 
 @layer utilities {
 	.material-symbols-rounded {
