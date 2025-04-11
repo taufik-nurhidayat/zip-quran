@@ -1,39 +1,33 @@
 // theme.js
 import { writable } from 'svelte/store';
 
-// Create a theme store with initial value from localStorage or 'auto'
+// Create the theme store with an initial value from localStorage or 'auto'
 const storedTheme =
 	typeof localStorage !== 'undefined' ? localStorage.getItem('theme') || 'auto' : 'auto';
 export const theme = writable(storedTheme);
 
-// Subscribe to theme changes and update localStorage and data-theme attribute
-if (typeof window !== 'undefined') {
-	theme.subscribe((value) => {
-		localStorage.setItem('theme', value);
+// Define available themes for reference
+export const availableThemes = ['light', 'dark', 'auto', 'retro'];
 
-		// Set the data-theme attribute based on the selected theme or system preference
-		if (value === 'auto') {
-			const systemPrefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
-			document.documentElement.setAttribute('data-theme', systemPrefersDark ? 'dark' : 'light');
-		} else {
-			document.documentElement.setAttribute('data-theme', value);
-		}
-	});
-
-	// Listen for system preference changes
-	window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', (e) => {
-		// Only update if current theme is 'auto'
-		if (localStorage.getItem('theme') === 'auto') {
-			document.documentElement.setAttribute('data-theme', e.matches ? 'dark' : 'light');
-		}
-	});
-
-	// Initialize theme immediately
-	const currentTheme = localStorage.getItem('theme') || 'auto';
-	if (currentTheme === 'auto') {
-		const systemPrefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
-		document.documentElement.setAttribute('data-theme', systemPrefersDark ? 'dark' : 'light');
-	} else {
-		document.documentElement.setAttribute('data-theme', currentTheme);
+// Function to set theme (can be used anywhere)
+export function setTheme(newTheme: string) {
+	// Validate theme if needed
+	if (!availableThemes.includes(newTheme)) {
+		console.warn(`Theme "${newTheme}" is not recognized. Using "light" instead.`);
+		newTheme = 'light';
 	}
+
+	// Save to localStorage for persistence
+	if (typeof localStorage !== 'undefined') {
+		localStorage.setItem('theme', newTheme);
+	}
+
+	// Update the store value
+	theme.set(newTheme);
+}
+
+// Function to get the system preference
+export function getSystemPreference() {
+	if (typeof window === 'undefined') return 'light';
+	return window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
 }

@@ -10,9 +10,7 @@
 	<title>Zip Qur'an - Simple Al-Qur'an Applications</title>
 </svelte:head>
 <ThemeInitializer />
-<div class="h-screen">
-	<div class="h-full overflow-auto">
-		<slot />
-	</div>
+<div class="h-screen px-4">
+	<slot />
 	<AppBar />
 </div>
