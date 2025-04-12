@@ -8,8 +8,13 @@
 			link: '/'
 		},
 		{
-			name: 'Bookmark',
-			icon: 'bookmark',
+			name: "Qur'an",
+			icon: 'book_ribbon',
+			link: '/quran'
+		},
+		{
+			name: 'Bookmarks',
+			icon: 'bookmarks',
 			link: '/bookmarks'
 		},
 		{
