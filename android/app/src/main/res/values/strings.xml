@@ -1,0 +1,7 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+    <string name="app_name">zip-quran</string>
+    <string name="title_activity_main">zip-quran</string>
+    <string name="package_name">dev.nurhidayat.zip</string>
+    <string name="custom_url_scheme">dev.nurhidayat.zip</string>
+</resources>
