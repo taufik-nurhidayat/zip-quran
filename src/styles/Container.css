@@ -1,0 +1,6 @@
+.Container {
+	@apply mx-auto max-w-xl;
+	&.spaced {
+		@apply px-4 py-8;
+	}
+}

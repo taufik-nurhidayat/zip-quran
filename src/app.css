@@ -29,6 +29,8 @@
 		-webkit-font-feature-settings: 'liga';
 		-webkit-font-smoothing: antialiased;
 	}
+	@import './styles/Container.css';
+	@import './styles/AppBar.css';
 }
 
 @layer utilities {
