@@ -7,7 +7,7 @@ const storedTheme =
 export const theme = writable(storedTheme);
 
 // Define available themes for reference
-export const availableThemes = ['light', 'dark', 'auto', 'retro'];
+export const availableThemes = ['light', 'dark', 'lofi', 'retro', 'auto'];
 
 // Function to set theme (can be used anywhere)
 export function setTheme(newTheme: string) {
