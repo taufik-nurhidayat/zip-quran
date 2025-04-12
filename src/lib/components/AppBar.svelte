@@ -10,7 +10,7 @@
 		{
 			name: 'Bookmark',
 			icon: 'bookmark',
-			link: '/bookmark'
+			link: '/bookmarks'
 		},
 		{
 			name: 'Settings',
