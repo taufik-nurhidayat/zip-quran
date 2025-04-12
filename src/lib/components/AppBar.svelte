@@ -25,7 +25,7 @@
 </script>
 
 <div class="AppBar">
-	<nav class="Container flex w-full justify-between p-1">
+	<nav class="Container flex w-full justify-between gap-1 p-1">
 		{#each navs as nav, index (index)}
 			<a href={nav.link} class="grow" class:active={isActive(nav.link)}>
 				<span class="material-symbols-rounded filled">{nav.icon}</span>

@@ -1,7 +1,7 @@
 .AppBar {
-	@apply bg-base-100 border-base-300 fixed bottom-0 left-0 w-full border-t shadow-lg;
+	@apply bg-base-100 border-base-300 fixed bottom-0 left-0 w-full border-t font-medium shadow-lg;
 	nav a {
-		@apply text-base-content hover:text-primary rounded-field inline-flex flex-col items-center justify-center gap-1 px-4 py-2;
+		@apply text-base-content hover:text-primary hover:bg-base-300 rounded-field inline-flex flex-col items-center justify-center gap-1 px-4 py-2;
 		&.active {
 			@apply text-primary-content bg-primary;
 		}
