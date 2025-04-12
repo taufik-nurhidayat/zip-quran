@@ -9,10 +9,16 @@
 
 @theme {
 	--font-sans: 'Inter Variable', 'ui-sans-serif', 'sans-serif';
+	--color-surface: oklch(98.5% 0 0);
 }
 
 @custom-variant dark (&:where([data-theme=night], [data-theme=night] *));
 
+@layer base {
+	body {
+		@apply bg-surface;
+	}
+}
 @layer components {
 	.material-symbols-rounded {
 		font-family: 'Material Symbols Rounded';
