@@ -9,6 +9,8 @@
 
 @plugin "daisyui/theme" {
 	name: 'light';
+	--color-primary: oklch(72.3% 0.219 149.579);
+	--color-primary-content: oklch(100% 0 0);
 }
 
 @plugin "daisyui/theme" {
