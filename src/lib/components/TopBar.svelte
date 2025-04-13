@@ -22,7 +22,30 @@
 		<div class="flex-1">
 			<div class="tooltip tooltip-bottom" data-tip="Back">
 				<button class="btn btn-ghost btn-square" aria-label="Back" onclick={handleBackClick}>
-					<span class="material-symbols-rounded">arrow_back</span>
+					<svg
+						viewBox="0 0 24 24"
+						fill="none"
+						xmlns="http://www.w3.org/2000/svg"
+						width="24"
+						height="24"
+					>
+						<path
+							d="M9.57 5.92993L3.5 11.9999L9.57 18.0699"
+							stroke="#292D32"
+							stroke-miterlimit="10"
+							stroke-linecap="round"
+							stroke-linejoin="round"
+							stroke-width="2"
+						></path>
+						<path
+							d="M20.5 12H3.67004"
+							stroke="#292D32"
+							stroke-miterlimit="10"
+							stroke-linecap="round"
+							stroke-linejoin="round"
+							stroke-width="2"
+						></path>
+					</svg>
 				</button>
 			</div>
 		</div>

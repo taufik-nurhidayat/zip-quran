@@ -1,6 +1,7 @@
 <script lang="ts">
+	import ThemeChanger from '$lib/components/ThemeChanger.svelte';
 	import TopBar from '$lib/components/TopBar.svelte';
-	import { availableThemes, getSystemPreference, setTheme, theme } from '$lib/stores/theme';
+	import { theme } from '$lib/stores/theme';
 </script>
 
 <div>
@@ -8,45 +9,62 @@
 	<div class="space-y-4 pt-16 pb-5">
 		<div class="join join-vertical w-full">
 			<label class="join-item btn w-full justify-start" for="#">
-				<span class="material-symbols-rounded text-xl">language</span>
+				<svg
+					viewBox="0 0 24 24"
+					fill="none"
+					xmlns="http://www.w3.org/2000/svg"
+					width="20"
+					height="20"
+				>
+					<path
+						d="M16.19 2H7.81C4.17 2 2 4.17 2 7.81V16.18C2 19.83 4.17 22 7.81 22H16.18C19.82 22 21.99 19.83 21.99 16.19V7.81C22 4.17 19.83 2 16.19 2ZM17 17.47C15.29 17.47 13.69 16.73 12.41 15.36C10.96 16.67 9.07 17.47 7 17.47C6.59 17.47 6.25 17.13 6.25 16.72C6.25 16.31 6.59 15.97 7 15.97C10.47 15.97 13.34 13.22 13.71 9.7H12H7.01C6.6 9.7 6.26 9.36 6.26 8.95C6.26 8.54 6.6 8.21 7.01 8.21H11.25V7.28C11.25 6.87 11.59 6.53 12 6.53C12.41 6.53 12.75 6.87 12.75 7.28V8.21H14.44C14.46 8.21 14.48 8.2 14.5 8.2C14.52 8.2 14.54 8.21 14.56 8.21H16.99C17.4 8.21 17.74 8.55 17.74 8.96C17.74 9.37 17.4 9.71 16.99 9.71H15.21C15.06 11.42 14.42 12.99 13.44 14.27C14.44 15.38 15.69 15.98 17 15.98C17.41 15.98 17.75 16.32 17.75 16.73C17.75 17.14 17.41 17.47 17 17.47Z"
+						fill="#292D32"
+					></path>
+				</svg>
 				<span>Language</span>
 			</label>
 			<label class="join-item btn w-full justify-start" for="theme_changer">
-				<span class="material-symbols-rounded text-xl">palette</span>
-				<span>Theme</span>
+				<svg
+					viewBox="0 0 24 24"
+					fill="none"
+					xmlns="http://www.w3.org/2000/svg"
+					width="20"
+					height="20"
+				>
+					<path
+						d="M22.0009 16.5V19.5C22.0009 20.88 20.8809 22 19.5009 22H12.3609C11.4709 22 11.0309 20.93 11.6509 20.3L17.5209 14.3C17.7109 14.11 17.9709 14 18.2309 14H19.5009C20.8809 14 22.0009 15.12 22.0009 16.5Z"
+						fill="#292D32"
+					></path>
+					<path
+						d="M18.3702 11.2895L15.6602 13.9995L13.2002 16.4495C12.5702 17.0795 11.4902 16.6395 11.4902 15.7495C11.4902 12.5395 11.4902 7.25953 11.4902 7.25953C11.4902 6.98953 11.6002 6.73953 11.7802 6.54953L12.7002 5.62953C13.6802 4.64953 15.2602 4.64953 16.2402 5.62953L18.3602 7.74953C19.3502 8.72953 19.3502 10.3095 18.3702 11.2895Z"
+						fill="#292D32"
+					></path>
+					<path
+						d="M7.5 2H4.5C3 2 2 3 2 4.5V18C2 18.27 2.03 18.54 2.08 18.8C2.11 18.93 2.14 19.06 2.18 19.19C2.23 19.34 2.28 19.49 2.34 19.63C2.35 19.64 2.35 19.65 2.35 19.65C2.36 19.65 2.36 19.65 2.35 19.66C2.49 19.94 2.65 20.21 2.84 20.46C2.95 20.59 3.06 20.71 3.17 20.83C3.28 20.95 3.4 21.05 3.53 21.15L3.54 21.16C3.79 21.35 4.06 21.51 4.34 21.65C4.35 21.64 4.35 21.64 4.35 21.65C4.5 21.72 4.65 21.77 4.81 21.82C4.94 21.86 5.07 21.89 5.2 21.92C5.46 21.97 5.73 22 6 22C6.41 22 6.83 21.94 7.22 21.81C7.33 21.77 7.44 21.73 7.55 21.68C7.9 21.54 8.24 21.34 8.54 21.08C8.63 21.01 8.73 20.92 8.82 20.83L8.86 20.79C9.56 20.07 10 19.08 10 18V4.5C10 3 9 2 7.5 2ZM6 19.5C5.17 19.5 4.5 18.83 4.5 18C4.5 17.17 5.17 16.5 6 16.5C6.83 16.5 7.5 17.17 7.5 18C7.5 18.83 6.83 19.5 6 19.5Z"
+						fill="#292D32"
+					></path>
+				</svg>
+				<span>Preferences</span>
 				<span class="ml-auto text-xs font-normal">{$theme}</span>
 			</label>
 		</div>
 		<div class="join join-vertical w-full">
 			<button class="join-item btn w-full justify-start">
-				<span class="material-symbols-rounded text-xl">error</span>
+				<svg
+					viewBox="0 0 24 24"
+					fill="none"
+					xmlns="http://www.w3.org/2000/svg"
+					width="20"
+					height="20"
+				>
+					<path
+						d="M19.5099 5.85L13.5699 2.42C12.5999 1.86 11.3999 1.86 10.4199 2.42L4.48992 5.85C3.51992 6.41 2.91992 7.45 2.91992 8.58V15.42C2.91992 16.54 3.51992 17.58 4.48992 18.15L10.4299 21.58C11.3999 22.14 12.5999 22.14 13.5799 21.58L19.5199 18.15C20.4899 17.59 21.0899 16.55 21.0899 15.42V8.58C21.0799 7.45 20.4799 6.42 19.5099 5.85ZM11.2499 7.75C11.2499 7.34 11.5899 7 11.9999 7C12.4099 7 12.7499 7.34 12.7499 7.75V13C12.7499 13.41 12.4099 13.75 11.9999 13.75C11.5899 13.75 11.2499 13.41 11.2499 13V7.75ZM12.9199 16.63C12.8699 16.75 12.7999 16.86 12.7099 16.96C12.5199 17.15 12.2699 17.25 11.9999 17.25C11.8699 17.25 11.7399 17.22 11.6199 17.17C11.4899 17.12 11.3899 17.05 11.2899 16.96C11.1999 16.86 11.1299 16.75 11.0699 16.63C11.0199 16.51 10.9999 16.38 10.9999 16.25C10.9999 15.99 11.0999 15.73 11.2899 15.54C11.3899 15.45 11.4899 15.38 11.6199 15.33C11.9899 15.17 12.4299 15.26 12.7099 15.54C12.7999 15.64 12.8699 15.74 12.9199 15.87C12.9699 15.99 12.9999 16.12 12.9999 16.25C12.9999 16.38 12.9699 16.51 12.9199 16.63Z"
+						fill="#292D32"
+					></path>
+				</svg>
 				<span> About </span>
 			</button>
 		</div>
 	</div>
-	<input type="checkbox" id="theme_changer" class="modal-toggle" />
-	<div class="modal modal-bottom sm:modal-middle" role="dialog">
-		<div class="modal-box">
-			<h3 class="text-lg font-bold">Change theme</h3>
-			<div class="flex flex-wrap gap-2 py-8">
-				{#each availableThemes as value, index (index)}
-					<button class="btn" onclick={() => setTheme(value)}>
-						<div
-							data-theme={value === 'auto' ? getSystemPreference() : value}
-							class="bg-base-100 grid shrink-0 grid-cols-2 gap-0.5 rounded-md p-1 shadow-sm"
-						>
-							<div class="bg-base-content size-1 rounded-full"></div>
-							<div class="bg-primary size-1 rounded-full"></div>
-							<div class="bg-secondary size-1 rounded-full"></div>
-							<div class="bg-accent size-1 rounded-full"></div>
-						</div>
-						<span class="text-xs uppercase">
-							{value}
-						</span>
-					</button>
-				{/each}
-			</div>
-		</div>
-		<label class="modal-backdrop" for="theme_changer">close</label>
-	</div>
 </div>
+<ThemeChanger />
