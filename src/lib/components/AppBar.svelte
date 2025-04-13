@@ -1,5 +1,5 @@
 <script lang="ts">
-	import * as m from '$lib/paraglide/messages';
+	import { m } from '$lib/paraglide/messages';
 	import { page } from '$app/state';
 	import Book from '$lib/icons/Book.svelte';
 	import BookMark from '$lib/icons/BookMark.svelte';
