@@ -2,7 +2,7 @@ import type { CapacitorConfig } from '@capacitor/cli';
 
 const config: CapacitorConfig = {
 	appId: 'dev.nurhidayat.zip',
-	appName: 'zip-quran',
+	appName: "Zip Qur'an",
 	webDir: 'build'
 };
 

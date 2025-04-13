@@ -1,25 +1,36 @@
 <script lang="ts">
 	import { page } from '$app/state';
+	import Book from '$lib/icons/Book.svelte';
+	import BookMark from '$lib/icons/BookMark.svelte';
+	import Home from '$lib/icons/Home.svelte';
+	import Setting from '$lib/icons/Setting.svelte';
+	import { type Component } from 'svelte';
 
-	const navs = [
+	type NavItem = {
+		name: string;
+		icon: unknown;
+		link: string;
+	};
+
+	const navs: NavItem[] = [
 		{
 			name: 'Home',
-			icon: 'home',
+			icon: Home,
 			link: '/'
 		},
 		{
 			name: "Qur'an",
-			icon: 'book_ribbon',
+			icon: Book,
 			link: '/quran'
 		},
 		{
-			name: 'Bookmarks',
-			icon: 'bookmarks',
+			name: 'Bookmark',
+			icon: BookMark,
 			link: '/bookmarks'
 		},
 		{
 			name: 'Settings',
-			icon: 'settings',
+			icon: Setting,
 			link: '/settings'
 		}
 	];
@@ -33,7 +44,7 @@
 	<nav class="Container flex w-full justify-between gap-1 p-1">
 		{#each navs as nav, index (index)}
 			<a href={nav.link} class="grow" class:active={isActive(nav.link)}>
-				<span class="material-symbols-rounded filled">{nav.icon}</span>
+				<svelte:component this={nav.icon as Component} size={24} />
 				<span class="text-xs font-medium">{nav.name}</span>
 			</a>
 		{/each}
