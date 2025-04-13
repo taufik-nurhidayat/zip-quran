@@ -1,9 +1,12 @@
 {
 	"$schema": "https://inlang.com/schema/inlang-message-format",
-	"last_read": "Last read",
-	"verse": "Verse",
-	"home": "Home",
+	"about": "About",
 	"bookmark": "Bookmarks",
+	"home": "Home",
+	"language": "Language",
+	"last_read": "Last read",
+	"preferences": "Preferences",
 	"settings": "Settings",
+	"verse": "Verse",
 	"hello_world": "Hello, {name} from en!"
 }

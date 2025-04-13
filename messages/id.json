@@ -1,9 +1,12 @@
 {
 	"$schema": "https://inlang.com/schema/inlang-message-format",
-	"last_read": "Terakhir dibaca",
-	"verse": "Ayat",
-	"home": "Beranda",
+	"about": "Tentang",
 	"bookmark": "Markah",
+	"home": "Beranda",
+	"language": "Bahasa",
+	"last_read": "Terakhir dibaca",
+	"preferences": "Preferensi",
 	"settings": "Pengaturan",
+	"verse": "Ayat",
 	"hello_world": "Hello, {name} from id!"
 }

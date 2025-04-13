@@ -1,4 +1,5 @@
 <script lang="ts">
+	import * as m from '$lib/paraglide/messages';
 	import ThemeChanger from '$lib/components/ThemeChanger.svelte';
 	import TopBar from '$lib/components/TopBar.svelte';
 	import { theme } from '$lib/stores/theme';
@@ -21,7 +22,7 @@
 						fill="#292D32"
 					></path>
 				</svg>
-				<span>Language</span>
+				<span>{m.language()}</span>
 			</label>
 			<label class="join-item btn w-full justify-start" for="theme_changer">
 				<svg
@@ -44,7 +45,7 @@
 						fill="#292D32"
 					></path>
 				</svg>
-				<span>Preferences</span>
+				<span>{m.preferences()}</span>
 				<span class="ml-auto text-xs font-normal">{$theme}</span>
 			</label>
 		</div>
@@ -62,7 +63,7 @@
 						fill="#292D32"
 					></path>
 				</svg>
-				<span> About </span>
+				<span>{m.about()}</span>
 			</button>
 		</div>
 	</div>
