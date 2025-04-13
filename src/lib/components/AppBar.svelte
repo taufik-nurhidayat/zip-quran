@@ -44,7 +44,7 @@
 <div class="AppBar">
 	<nav class="Container flex w-full justify-between gap-1 p-1">
 		{#each navs as nav, index (index)}
-			<a href={nav.link} class="grow" class:active={isActive(nav.link)}>
+			<a href={nav.link} class="flex-1" class:active={isActive(nav.link)}>
 				<svelte:component this={nav.icon as Component} size={24} />
 				<span class="text-xs font-medium">{nav.name}</span>
 			</a>
