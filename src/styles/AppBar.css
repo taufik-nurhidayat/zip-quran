@@ -1,6 +1,5 @@
 .AppBar {
-	box-shadow: 0 -1px 3px rgba(0, 0, 0, 0.1);
-	@apply bg-base-100 border-base-300 fixed bottom-0 left-0 w-full font-medium;
+	@apply bg-base-100 border-base-300 fixed bottom-0 left-0 w-full border-t font-medium;
 	nav a {
 		@apply text-base-content rounded-field inline-flex flex-col items-center justify-center gap-1 px-3 py-2;
 		&:hover,
