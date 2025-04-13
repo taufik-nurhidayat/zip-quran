@@ -2,7 +2,6 @@
 	import AppBar from '$lib/components/AppBar.svelte';
 	import '../font.css';
 	import '../app.css';
-	import '../icon.css';
 	import ThemeInitializer from '$lib/ThemeInitializer.svelte';
 </script>
 
