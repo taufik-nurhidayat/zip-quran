@@ -1,4 +1,5 @@
 <script lang="ts">
+	import * as m from '$lib/paraglide/messages';
 	import { page } from '$app/state';
 	import Book from '$lib/icons/Book.svelte';
 	import BookMark from '$lib/icons/BookMark.svelte';
@@ -14,7 +15,7 @@
 
 	const navs: NavItem[] = [
 		{
-			name: 'Home',
+			name: m.home(),
 			icon: Home,
 			link: '/'
 		},
@@ -24,12 +25,12 @@
 			link: '/quran'
 		},
 		{
-			name: 'Bookmark',
+			name: m.bookmark(),
 			icon: BookMark,
 			link: '/bookmarks'
 		},
 		{
-			name: 'Settings',
+			name: m.settings(),
 			icon: Setting,
 			link: '/settings'
 		}
