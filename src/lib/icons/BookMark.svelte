@@ -1,14 +1,8 @@
 <script>
-	const { size } = $props();
+	const { size = 24 } = $props();
 </script>
 
-<svg
-	viewBox="0 0 24 24"
-	fill="none"
-	xmlns="http://www.w3.org/2000/svg"
-	width={size ?? 24}
-	height={size ?? 24}
->
+<svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" width={size} height={size}>
 	<path
 		opacity="0.4"
 		d="M16.19 2H7.82C4.17 2 2 4.17 2 7.81V16.18C2 19.82 4.17 21.99 7.81 21.99H16.18C19.82 21.99 21.99 19.82 21.99 16.18V7.81C22 4.17 19.83 2 16.19 2Z"
