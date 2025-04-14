@@ -7,6 +7,7 @@
 	import ColorSwatchBold from '$lib/icons/ColorSwatchBold.svelte';
 	import Warning2Bold from '$lib/icons/Warning2Bold.svelte';
 	import LanguageChanger from '$lib/components/LanguageChanger.svelte';
+	import AppBar from '$lib/components/AppBar.svelte';
 </script>
 
 <div>
@@ -33,3 +34,4 @@
 </div>
 <ThemeChanger />
 <LanguageChanger />
+<AppBar />

@@ -11,5 +11,4 @@
 <ThemeInitializer />
 <div class="Container h-screen px-4">
 	<slot />
-	<AppBar />
 </div>
