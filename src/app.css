@@ -50,10 +50,15 @@
 
 @theme {
 	--font-sans: 'Inter Variable', 'ui-sans-serif', 'sans-serif';
+	--font-ar: 'IndoPak', 'ui-sans-serif', 'sans-serif';
 }
 @custom-variant dark (&:where([data-theme=dark], [data-theme=dark] *));
 
 @layer base {
+	@import './styles/Tajweed.css';
+	.ar-size {
+		font-size: var(--ar-size, 1.6rem);
+	}
 }
 @layer components {
 	.material-symbols-rounded {
