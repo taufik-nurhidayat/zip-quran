@@ -90,4 +90,12 @@
 				'opsz' 24;
 		}
 	}
+	.stretch-link::before {
+		content: '';
+		position: absolute;
+		top: 0;
+		left: 0;
+		bottom: 0;
+		right: 0;
+	}
 }
