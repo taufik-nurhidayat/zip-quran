@@ -6,13 +6,14 @@
 	import LanguageSquareBold from '$lib/icons/LanguageSquareBold.svelte';
 	import ColorSwatchBold from '$lib/icons/ColorSwatchBold.svelte';
 	import Warning2Bold from '$lib/icons/Warning2Bold.svelte';
+	import LanguageChanger from '$lib/components/LanguageChanger.svelte';
 </script>
 
 <div>
 	<TopBar title="Settings" />
 	<div class="space-y-4 pt-16 pb-5">
 		<div class="join join-vertical w-full">
-			<label class="join-item btn w-full justify-start" for="#">
+			<label class="join-item btn w-full justify-start" for="language_changer">
 				<LanguageSquareBold size="20" />
 				<span>{m.language()}</span>
 			</label>
@@ -31,3 +32,4 @@
 	</div>
 </div>
 <ThemeChanger />
+<LanguageChanger />
