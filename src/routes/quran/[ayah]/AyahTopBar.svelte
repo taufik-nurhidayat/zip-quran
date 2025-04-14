@@ -20,9 +20,22 @@
 		</div>
 		<div class="flex-none text-lg font-semibold">{title}</div>
 		<div class="flex-1 text-end">
-			<button class="btn btn-ghost btn-square" aria-label="Options">
-				<MoreTwoTone />
-			</button>
+			<div class="dropdown dropdown-end">
+				<div class="tooltip tooltip-bottom" data-tip="Options">
+					<button class="btn btn-ghost btn-square" aria-label="Options" tabindex="0">
+						<MoreTwoTone />
+					</button>
+				</div>
+				<div
+					class="dropdown-content bg-base-100 rounded-box border-base-300 z-1 w-52 border shadow"
+					tabindex="0"
+					role="listbox"
+				>
+					<ul class="menu w-full p-2">
+						<li role="listitem"><a href="/settings">Settings</a></li>
+					</ul>
+				</div>
+			</div>
 		</div>
 	</div>
 </div>
