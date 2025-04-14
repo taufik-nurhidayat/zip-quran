@@ -19,7 +19,7 @@
 			</label>
 			<label class="join-item btn w-full justify-start" for="theme_changer">
 				<ColorSwatchBold size="20" />
-				<span>{m.preferences()}</span>
+				<span>{m.theme()}</span>
 				<span class="ml-auto text-xs font-normal">{$theme}</span>
 			</label>
 		</div>
