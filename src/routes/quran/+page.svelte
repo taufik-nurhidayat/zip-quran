@@ -8,7 +8,7 @@
 	<p class="mt-6 text-lg font-semibold">All surah</p>
 	<div class="mt-4">
 		<div
-			class="hover:bg-base-300 focus:bg-base-300 rounded-box border-base-300 bg-base-100 relative border p-4"
+			class="hover:bg-base-300 active:bg-base-300 rounded-box border-base-300 bg-base-100 relative border p-4"
 		>
 			<div class="relative flex items-center gap-4">
 				<div>
