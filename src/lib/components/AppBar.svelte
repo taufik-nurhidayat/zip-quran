@@ -5,13 +5,7 @@
 	import BookMark from '$lib/icons/BookMark.svelte';
 	import Home from '$lib/icons/Home.svelte';
 	import Setting from '$lib/icons/Setting.svelte';
-	import { type Component } from 'svelte';
-
-	type NavItem = {
-		name: string;
-		icon: unknown;
-		link: string;
-	};
+	import type { NavItem } from '$lib/types/nav';
 
 	const navs: NavItem[] = [
 		{
@@ -45,7 +39,7 @@
 	<nav class="Container flex w-full justify-between gap-1 p-1">
 		{#each navs as nav, index (index)}
 			<a href={nav.link} class="flex-1" class:active={isActive(nav.link)}>
-				<svelte:component this={nav.icon as Component} size={24} />
+				<svelte:component this={nav.icon} size={24} />
 				<span class="text-xs font-medium">{nav.name}</span>
 			</a>
 		{/each}
