@@ -1,6 +1,7 @@
 {
 	"$schema": "https://inlang.com/schema/inlang-message-format",
 	"about": "Tentang",
+	"back": "Kembali",
 	"bookmark": "Markah",
 	"home": "Beranda",
 	"language": "Bahasa",

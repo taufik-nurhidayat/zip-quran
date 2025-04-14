@@ -2,6 +2,7 @@
 	"$schema": "https://inlang.com/schema/inlang-message-format",
 	"about": "About",
 	"bookmark": "Bookmarks",
+	"back": "Back",
 	"home": "Home",
 	"language": "Language",
 	"last_read": "Last read",
