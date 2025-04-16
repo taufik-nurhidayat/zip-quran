@@ -1,15 +1,16 @@
 <script lang="ts">
+	import { goto, invalidate } from '$app/navigation';
 	import { setLocale, getLocale } from '$lib/paraglide/runtime';
 
 	let systemLanguage = $state(getLocale());
 	let translationLanguage = $state(getLocale());
 	let languageChangerModalState = $state(false);
-	function onSave() {
+	async function onSave() {
 		languageChangerModalState = false;
 		setLocale(systemLanguage, {
 			reload: false
 		});
-		window.location.reload();
+		invalidate('app:data');
 	}
 </script>
 
