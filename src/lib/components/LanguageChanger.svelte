@@ -1,15 +1,19 @@
 <script lang="ts">
 	import { setLocale, getLocale } from '$lib/paraglide/runtime';
+	import { Capacitor } from '@capacitor/core';
 
 	let systemLanguage = $state(getLocale());
 	let translationLanguage = $state(getLocale());
 	let languageChangerModalState = $state(false);
+	let isNative = Capacitor.isNativePlatform();
 	async function onSave() {
 		setLocale(systemLanguage, {
-			reload: false
+			reload: !isNative
 		});
 		// fix capacitor problem when reloaded
-		window.location.replace('/settings.html');
+		if (isNative) {
+			window.location.replace('/settings.html');
+		}
 	}
 </script>
 
