@@ -1,16 +1,15 @@
 <script lang="ts">
-	import { goto, invalidate } from '$app/navigation';
 	import { setLocale, getLocale } from '$lib/paraglide/runtime';
 
 	let systemLanguage = $state(getLocale());
 	let translationLanguage = $state(getLocale());
 	let languageChangerModalState = $state(false);
 	async function onSave() {
-		languageChangerModalState = false;
 		setLocale(systemLanguage, {
 			reload: false
 		});
-		invalidate('app:data');
+		// fix capacitor problem when reloaded
+		window.location.replace('/settings.html');
 	}
 </script>
 

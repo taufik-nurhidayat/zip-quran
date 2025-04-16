@@ -8,8 +8,6 @@
 	import Warning2Bold from '$lib/icons/Warning2Bold.svelte';
 	import LanguageChanger from '$lib/components/LanguageChanger.svelte';
 	import AppBar from '$lib/components/AppBar.svelte';
-
-	$: message = m;
 </script>
 
 <div>
@@ -18,7 +16,7 @@
 		<div class="join join-vertical w-full">
 			<label class="join-item btn w-full justify-start" for="language_changer">
 				<LanguageSquareBold size={20} />
-				<span>{message.language()}</span>
+				<span>{m.language()}</span>
 			</label>
 			<label class="join-item btn w-full justify-start" for="theme_changer">
 				<ColorSwatchBold size={20} />
