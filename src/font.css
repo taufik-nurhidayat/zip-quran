@@ -11,10 +11,10 @@
 }
 
 @font-face {
-	font-family: 'LPMQ Isep Misbah';
+	font-family: 'LPMQ';
 	src: url('/fonts/lpmq.ttf') format('truetype');
 }
 @font-face {
 	font-family: 'IndoPak';
-	src: url('/fonts/indopak.woff2') format('woff2');
+	src: url('/fonts/IndoPak.woff2') format('woff2');
 }
