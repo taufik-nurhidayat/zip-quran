@@ -1,5 +1,5 @@
 # Use Node.js Alpine as base image
-FROM node:18-alpine AS base
+FROM node:22-alpine AS base
 
 # Install pnpm globally
 RUN npm install -g pnpm
@@ -8,13 +8,17 @@ RUN npm install -g pnpm
 WORKDIR /app
 
 # Copy package files
-COPY package.json pnpm-lock.yaml* ./
+COPY package.json pnpm-lock.yaml* pnpm-workspace.yaml ./
+COPY vite.config.ts tsconfig.json svelte.config.js ./
 
 # Install dependencies
 RUN pnpm install --frozen-lockfile
 
 # Copy source code
 COPY . .
+
+# Pepare
+RUN pnpm run prepare
 
 # Build the application
 RUN pnpm run build
