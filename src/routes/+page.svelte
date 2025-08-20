@@ -17,7 +17,6 @@
       { id: 3, name: 'Al-' + 'Imran', verses: 200 },
       { id: 4, name: 'An-Nisa', verses: 176 },
       { id: 5, name: 'Al-Ma'idah', verses: 120 },
-      // Add more chapters as needed
     ]);
 
     searchTerm.subscribe((term) => {
