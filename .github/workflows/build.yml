@@ -1,18 +1,7 @@
 name: Build
 
 on:
-  workflow_dispatch:  # <-- ADD THIS LINE
-    inputs:
-      BY_TRIGGER:
-        description: 'Triggered by bot'
-        required: false
-        default: 'true'
-      PROJECT_NAME:
-        description: 'Project name'
-        required: false
-      TAG_NAME:
-        description: 'Tag or branch to build'
-        required: false
+  workflow_dispatch:
   push:
     branches: ["main"]
   pull_request:
