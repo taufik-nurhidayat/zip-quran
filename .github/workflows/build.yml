@@ -1,10 +1,7 @@
 name: Build
 
 on:
-  push:
-    branches: ["main"]
-  pull_request:
-  workflow_dispatch:  # This enables manual triggering
+  workflow_dispatch:  # <-- ADD THIS LINE
    inputs:
      BY_TRIGGER:
        description: 'Triggered by bot'
@@ -16,6 +13,9 @@ on:
      TAG_NAME:
        description: 'Tag or branch to build'
        required: false
+  push:
+    branches: ["main"]
+  pull_request:
 
 jobs:
   build:
